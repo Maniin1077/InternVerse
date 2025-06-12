@@ -1,10 +1,12 @@
 // script.js
+
+// Toggle sidebar visibility
 function toggleSidebar() {
   const sidebar = document.getElementById("sidebar");
   sidebar.classList.toggle("-translate-x-full");
 }
 
-// Ensure anchor navigation works from sticky banner
+// Smooth scroll for anchor links and close sidebar after click
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -12,6 +14,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
-    toggleSidebar(); // close sidebar after click
+    toggleSidebar(); // Close sidebar after navigation
   });
 });
