@@ -1,33 +1,13 @@
 /* style.css */
-
-/* Smooth scrolling for anchor links */
 body {
   scroll-behavior: smooth;
 }
 
-/* Sidebar link hover effect */
-#sidebar ul li a {
-  transition: all 0.3s ease-in-out;
+input, textarea {
+  outline: none;
 }
 
-#sidebar ul li a:hover {
-  padding-left: 12px;
-  color: #3b82f6; /* Tailwind's blue-500 */
-}
-
-/* Sticky banner animation */
-#stickyBanner {
-  animation: popIn 0.5s ease-out;
-}
-
-/* Pop-in animation */
-@keyframes popIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+input:focus, textarea:focus {
+  border-color: #3b82f6; /* Tailwind's blue-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
 }
